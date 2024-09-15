@@ -1,0 +1,234 @@
+*{
+    box-sizing: border-box;
+    /* border: 2px solid black; */
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1.5fr 5fr 1.8fr;
+    grid-template-rows: 1fr 1fr 1.5fr 0.5fr 1.5fr 1fr 0.5fr;
+    background-color: red;
+    height: 100vh;
+    width: 100%;
+    grid-template-areas:    "dashboard header header"
+                            "dashboard maincontent trending"
+                            "dashboard maincontent trending"
+                            "dashboard maincontent ."
+                            "dashboard maincontent news"
+                            "dashboard maincontent news"
+                            "footer footer footer";
+}
+
+.header{
+    background-color: var(--header-color);
+    grid-area: header;
+    padding: 20px;
+    padding-top: 5px;
+    display: grid;
+    grid-template-columns: 1.7fr 0.1fr 0.9fr;
+    grid-template-rows: 0.20fr 0.5fr;
+    height: min-content;
+    gap:15px;
+    margin-top: 0;
+    grid-template-areas: "search-bar alert profile"
+                         "intro-bar messages messages";
+}
+
+.search-bar-container{
+    width: 90%;
+    grid-area: search-bar;
+    padding: 5px;
+    padding-bottom: 0;
+    border: none;
+    font-size: 17px;
+    border-radius:30px;
+    border:1px solid #dcdcdc;
+    display: inline;
+}
+
+.search-bar-container:hover{
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+  }
+  .search-bar-container:focus-within{
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+    outline:none;
+  }
+
+.search-bar{
+    height:45px;
+    border:none;
+    border-radius:30px;
+    width:90%;
+    font-size:16px;
+    outline: none;
+    background-color: white ;
+}
+
+.sub-btn{
+    background-color: white;
+    border: none;
+}
+
+.sub-btn:hover{
+    cursor: pointer;
+}
+.alert-icon{
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    grid-area: alert;
+    display: grid;
+}
+
+.alert-icon:hover{
+    transform: scale(1.1);
+    background-color: grey;
+    cursor: pointer;
+}
+
+.fa-bell{
+    justify-self: center;
+    align-self: center;
+}
+
+.user-profile-tab{
+    grid-area: profile;
+    background-color: var(--header-color);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:30px;
+}
+
+.user-profile-tab >img{
+    width: 55px;
+    height: 55px;
+}
+
+.user-profile-tab > img:hover{
+    transform: scale(1.3)  ;
+}
+
+.user-profile-tab > p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.introbar{
+    grid-area: intro-bar;
+    background-color: var(--header-color);
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.introbar > img{
+    height: 100%;
+    width: 120px;
+}
+
+.introbar > 
+.messages{
+    grid-area: messages;
+    background-color: var(--header-color);
+}
+
+.messages >ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap:25px;
+    list-style: none;
+    padding: 20px;
+    width: 100%;
+    
+}
+
+.msgs > *{
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    width: max-content;
+    height: max-content;
+    background-color: blue;
+    border-radius:25px ;
+    font-size: 1.5rem;
+}
+
+.sidebar{
+    background-color: blue;
+    grid-area: dashboard;
+}
+
+.main-content{
+    background-color: yellow;
+    grid-area: maincontent;
+    display: grid;
+}
+
+.articles{
+    background-color: brown;
+}
+
+.trending{
+    background-color: pink;
+    grid-area: trending;
+}
+
+.news-tab{
+    background-color: purple;
+    grid-area: news;
+}
+
+.footer{
+    background-color: peru;
+    grid-area: footer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    font-size: 17px;
+    padding: 15px;
+    text-shadow: 0 0 7px #FFF;
+    font-family: 'Bellota Text', cursive;
+    text-align: center;
+    color: #FFF;
+    height: 60px; /* Ensure enough height for footer content */
+    margin: 0;
+    bottom: 0;
+    position: relative; /* Adjust positioning as needed */
+}
+
+/* Footer icon styling */
+.fa-github {
+    color: var(--primary-dark);
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.5);
+}
+
+
+
+
+/*CSS variables*/
+
+:root{
+    --primary-dark: #000000;
+    --primary-color: ;
+    --header-color: white;
+    --sidebar-color: ;
+    --header-highlight: ;
+    --header-buttons: ;
+    --header-btn-highlight: ;
+
+
+    
+    
+}
