@@ -7,7 +7,8 @@
     display: grid;
     grid-template-columns: 1.5fr 5fr 1.8fr;
     grid-template-rows: 1fr 1fr 1.5fr 0.5fr 1.5fr 1fr 0.5fr;
-    background-color: red;
+    background-color: var(--main-container);
+    gap:8px;
     height: 100vh;
     width: 100%;
     grid-template-areas:    "dashboard header header"
@@ -31,14 +32,17 @@
     gap:15px;
     margin-top: 0;
     grid-template-areas: "search-bar alert profile"
-                         "intro-bar messages messages";
+                         "intro-bar . messages";
+    box-shadow:0px 5px 10px #a8a6a6;
 }
 
 .search-bar-container{
-    width: 90%;
+    width: 95%;
+    height: 45px;
     grid-area: search-bar;
     padding: 5px;
     padding-bottom: 0;
+    margin-top: 30px;
     border: none;
     font-size: 17px;
     border-radius:30px;
@@ -47,21 +51,23 @@
 }
 
 .search-bar-container:hover{
-    box-shadow: 1px 1px 8px 1px #dcdcdc;
+    box-shadow: 1px 1px 8px 1px #504f4f;
   }
   .search-bar-container:focus-within{
-    box-shadow: 1px 1px 8px 1px #dcdcdc;
+    box-shadow: 1px 1px 8px 1px #504f4f;
     outline:none;
   }
 
 .search-bar{
-    height:45px;
+    height:35px;
     border:none;
     border-radius:30px;
     width:90%;
+    padding: 5px;
     font-size:16px;
     outline: none;
     background-color: white ;
+    align-self: flex-end;
 }
 
 .sub-btn{
@@ -76,13 +82,17 @@
     background-color: white;
     height: 50px;
     width: 50px;
+    padding: 10px;
+    margin-top: 5px;
     border-radius: 50px;
     grid-area: alert;
     display: grid;
+    align-self: center;
+    transition: transform 0.3s ease-in-out;
 }
 
 .alert-icon:hover{
-    transform: scale(1.1);
+    transform: scale(1.3);
     background-color: grey;
     cursor: pointer;
 }
@@ -102,12 +112,13 @@
 }
 
 .user-profile-tab >img{
-    width: 55px;
-    height: 55px;
+    width: 95px;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
 }
 
 .user-profile-tab > img:hover{
-    transform: scale(1.3)  ;
+    transform: scale(1.3) ;
 }
 
 .user-profile-tab > p{
@@ -126,22 +137,27 @@
 .introbar > img{
     height: 100%;
     width: 120px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.introbar > 
+.introbar >img:hover{
+    transform: scale(1.3);
+}
+
 .messages{
     grid-area: messages;
     background-color: var(--header-color);
+    margin-top: 20px;
+
 }
 
 .messages >ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap:25px;
+    display:flex;
+    gap: 55px;
     list-style: none;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
+    align-items: flex-end;
     
 }
 
@@ -149,21 +165,28 @@
     padding: 5px;
     padding-left: 20px;
     padding-right: 20px;
-    text-align: center;
     width: max-content;
     height: max-content;
-    background-color: blue;
+    background-color: var(--sidebar-color);
     border-radius:25px ;
     font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.msgs :hover{
+    transform: scale(1.2);
+    background-color: var(--right-column);
+    cursor: pointer;
 }
 
 .sidebar{
-    background-color: blue;
+    background-color: var(--sidebar-color);
     grid-area: dashboard;
+    box-shadow:6px 6px 10px #a8a6a6;
 }
 
 .main-content{
-    background-color: yellow;
+    background-color: var(--main-container);
     grid-area: maincontent;
     display: grid;
 }
@@ -173,17 +196,17 @@
 }
 
 .trending{
-    background-color: pink;
+    background-color: var(--main-container);
     grid-area: trending;
 }
 
 .news-tab{
-    background-color: purple;
+    background-color: var(--main-container);
     grid-area: news;
 }
 
 .footer{
-    background-color: peru;
+    background-color: var(--right-column);
     grid-area: footer;
     position: relative;
     display: flex;
@@ -222,11 +245,14 @@
 :root{
     --primary-dark: #000000;
     --primary-color: ;
-    --header-color: white;
+    --header-color: #fffdfb;
     --sidebar-color: ;
     --header-highlight: ;
     --header-buttons: ;
     --header-btn-highlight: ;
+    --sidebar-color: #0881a3;
+    --main-container: #fde9df;
+    --right-column: #ffd6a4;
 
 
     
