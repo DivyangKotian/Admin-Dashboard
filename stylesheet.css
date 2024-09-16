@@ -3,6 +3,10 @@
     /* border: 2px solid black; */
 }
 
+:root {
+    font-size: calc(0.625rem + 0.4vw);
+  }
+
 .main-container{
     display: grid;
     grid-template-columns: 1.5fr 5fr 1.8fr;
@@ -46,7 +50,7 @@
     padding-bottom: 0;
     margin-top: 30px;
     border: none;
-    font-size: 17px;
+    /* font-size: 17px; */
     border-radius:30px;
     border:1px solid #dcdcdc;
     display: inline;
@@ -66,7 +70,7 @@
     border-radius:30px;
     width:90%;
     padding: 5px;
-    font-size:16px;
+    /* font-size:16px; */
     outline: none;
     background-color: white ;
     align-self: flex-end;
@@ -128,7 +132,7 @@
 }
 
 .user-profile-tab > p{
-    font-size: 20px;
+    /* font-size: 20px; */
     text-align: center;
 }
 
@@ -138,7 +142,7 @@
     display: flex;
     align-items: flex-end;
     gap: 20px;
-    font-size: 20px;
+    /* font-size: 20px; */
     margin: 5px;
 }
 
@@ -178,7 +182,7 @@
     color: #FFF;
     background-color: var(--sidebar-color);
     border-radius:25px ;
-    font-size: 1.5rem;
+    /* font-size: 25px; */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -194,7 +198,7 @@
     box-shadow:6px 6px 10px #a8a6a6;  
     padding: 10px;
     padding-left: 10px;
-    font-size: 25px;
+    /* font-size: 25px; */
     overflow: auto;
     display: flex;
     flex-direction: column;
@@ -226,7 +230,7 @@ h1{
     display: flex;
     align-items: center;
     gap: 15px;
-    font-size: 40px;
+    /* font-size: 40px; */
     justify-content: flex-start;
     color: white  ;
 }
@@ -236,7 +240,7 @@ h1{
     grid-template-columns: minmax(250px 1fr);
     grid-template-rows: repeat(5 minmax(250px 1fr)) ;
     justify-items: flex-start;
-    padding-left: 10%;
+    padding-left: 10px;
 }
 
 .settings{
@@ -301,7 +305,7 @@ h1{
 }
 
 .card-container > .card-content{
-    font-size: 19px;
+    /* font-size: 19px; */
     justify-self: flex-start;
     align-self: flex-start;
     margin-top: 10px;
@@ -371,7 +375,7 @@ h1{
     justify-content: center;
     gap: 20px;
     width: 100%;
-    font-size: 17px;
+    /* font-size: 17px; */
     padding: 15px;
     text-shadow: 0 0 7px #FFF;
     font-family: 'Bellota Text', cursive;
@@ -386,7 +390,7 @@ h1{
 /* Footer icon styling */
 .fa-github {
     color: var(--primary-dark);
-    font-size: 24px;
+    /* font-size: 24px; */
     transition: transform 0.3s ease-in-out;
 }
 
