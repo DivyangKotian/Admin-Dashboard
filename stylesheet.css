@@ -259,11 +259,13 @@ h1{
     background-color: var(--sidebar-color-highlight);
     transform: scale(1.3);
 }
+
 .main-content{
     background-color: var(--main-container);
     grid-area: maincontent;
     display: grid;
     overflow: auto;
+    
 }
 
 .articles{
