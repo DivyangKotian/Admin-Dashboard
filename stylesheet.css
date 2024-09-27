@@ -7,18 +7,19 @@
     font-size: clamp(10px, 0.625rem + 0.2vw, 16px);
   }
 
-html{
-    transform-origin: top left;
+body{
     width: 100%;
+    height: 100vh;
 }
 
 .main-container{
     display: grid;
     grid-template-columns: minmax(200px, 1.5fr) minmax(300px, 5fr) minmax(250px, 1.8fr);
-    grid-template-rows: 1fr 1fr 1.5fr 0.5fr 1.5fr 1fr 0.5fr;
+    grid-template-rows: 1fr 1fr 1.5fr 0.5fr 1.5fr 1fr;
     background-color: var(--main-container);
     gap:15px;
-    height: 100vh;
+    height: 100%;
+    max-height: 100vh;
     max-width: 100vw;
     overflow: auto;
     grid-template-areas:    "dashboard header header"
@@ -26,8 +27,7 @@ html{
                             "dashboard maincontent news"
                             "dashboard maincontent ."
                             "dashboard maincontent trending"
-                            "dashboard maincontent trending"
-                            "footer footer footer";
+                            "dashboard maincontent trending";
 }
 
 .header{
@@ -255,6 +255,7 @@ h1{
     grid-template-rows: repeat(2 minmax(250px 1fr)) ;
     justify-items: flex-start;
     padding-left: 10px;
+    padding-bottom: 50px;
 }
 .settings >p {
     margin: 15px;
@@ -291,7 +292,7 @@ h1{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
     grid-template-rows: repeat(3, minmax(150px, 1.5fr));
-    gap:100px;
+    gap:80px;
 }
 
 .card-container{
@@ -340,7 +341,7 @@ h1{
 }
 
 .news-container{
-    max-height: 200%;
+    max-height: 100%;
     background-color: white;
     padding: 10px;
     border-radius: 30px;
@@ -381,14 +382,15 @@ h1{
 
 .footer{
     background-color: var(--right-column);
-    grid-area: footer;
-    position: relative;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
     width: 100%;
-    font-size: 15px;
+    font-size: 25px;
     padding: 10px;
     text-shadow: 0 0 7px #000000;
     font-family: 'Bellota Text', cursive;
@@ -397,7 +399,6 @@ h1{
     height: 50px; /* Ensure enough height for footer content */
     margin: 0;
     bottom: 0;
-    position: relative; /* Adjust positioning as needed */
 }
 
 /* Footer icon styling */
