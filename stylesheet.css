@@ -8,10 +8,11 @@
   }
 
 body{
-    width: 100%;
+    background-color: var(--main-container);
 }
 
 .main-container{
+    transform: scale(0.9);
     display: grid;
     grid-template-columns: minmax(200px, 1.5fr) minmax(300px, 5fr) minmax(250px, 1.8fr);
     grid-template-rows: 1fr 1fr 1.5fr 0.5fr 1.5fr 1fr;
