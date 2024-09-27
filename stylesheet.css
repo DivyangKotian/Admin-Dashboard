@@ -4,12 +4,13 @@
 }
 
 :root {
-    font-size: calc(0.625rem + 0.4vw);
+    font-size: clamp(16px, 0.625rem + 0.4vw, 22px);
   }
+  
 
 .main-container{
     display: grid;
-    grid-template-columns: 1.5fr 5fr 1.8fr;
+    grid-template-columns: minmax(200px, 1.5fr) minmax(300px, 5fr) minmax(250px, 1.8fr);
     grid-template-rows: 1fr 1fr 1.5fr 0.5fr 1.5fr 1fr 0.5fr;
     background-color: var(--main-container);
     gap:15px;
@@ -414,12 +415,8 @@ h1{
     --sidebar-color-highlight:#085e75 ;
     --main-container: #fde9df;
     --right-column: #ffd6a4;
-
-
-    
-    
 }
-
+  
 /*Fonts */
 .roboto-thin {
     font-family: "Roboto", sans-serif;
