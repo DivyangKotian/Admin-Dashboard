@@ -6,7 +6,13 @@
 :root {
     font-size: clamp(10px, 0.625rem + 0.2vw, 16px);
   }
-   
+
+html{
+    transform: scale(0.80);
+    transform-origin: top left;
+    width: 111.11%;
+}
+
 .main-container{
     display: grid;
     grid-template-columns: minmax(200px, 1.5fr) minmax(300px, 5fr) minmax(250px, 1.8fr);
