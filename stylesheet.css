@@ -289,7 +289,7 @@ h1{
     margin: 0;
     background-color: var(--main-container);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+    grid-template-columns: repeat(3, minmax(150px, 2fr));
     grid-template-rows: repeat(3, minmax(150px, 1.5fr));
     gap:80px;
 }
