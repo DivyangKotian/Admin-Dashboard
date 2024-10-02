@@ -31,6 +31,16 @@ body{
     "footer footer footer footer";
 }
 
+@media (max-width: 768px){
+    body{
+        grid-template-columns: 5rem 1fr;
+        grid-template-areas: 
+        "dashboard header"
+        "dashboard maincontent"
+        "dashboard news"
+        "footer footer";
+    }
+}
 /*side bar styling*/
 
 .sidebar{
@@ -322,7 +332,7 @@ body{
     margin: 0;
     background-color: var(--main-container);
     display: grid;
-    grid-template-columns: repeat(3, minmax(150px, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 2fr));
     grid-template-rows: repeat(auto-fit, minmax(100px, 0.45fr));
     gap:35px;
 }
@@ -332,21 +342,24 @@ body{
     background-color: white;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     padding: 20px;
+    padding-top: 0px;
     box-shadow:5px 5px 10px #a8a6a6;
     transition: transform 0.3s ease-in-out;
     border-radius: 30px;
     border-left: #bb8645 5px solid;
     overflow: auto;
+    
 }
 
 .card-container:hover{
     transform: scale(1.1);
+    border-left: #085e75 5px solid;
 }
 
 .card-container > .card-content{
-    font-size: clamp(2px, calc(10px + 0.2vw), 16px);
+    font-size: clamp(2px, calc(9px + 0.2vw), 16px);
     justify-self: flex-start;
     align-self: flex-start;
     margin-top: 10px;
@@ -374,7 +387,6 @@ body{
 .news-container{
     font-size: clamp(2px, calc(9px + 0.1vw), 16px);
     background-color: white;
-    max-height: 50vh;
     padding: 20px;
     border-radius: 30px;
     box-shadow:5px 5px 10px #a8a6a6;
@@ -403,7 +415,7 @@ body{
     font-family: 'Bellota Text', cursive;
     text-align: center;
     color: #ffffff;
-    height: 30px; /* Ensure enough height for footer content */
+    height: 40px; /* Ensure enough height for footer content */
     position: relative;
 }
 
