@@ -322,7 +322,7 @@ body{
     padding-top: 0;
     width: 100%;
     transition: var(--transition-notSidebar);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .content-container{
@@ -332,8 +332,8 @@ body{
     margin: 0;
     background-color: var(--main-container);
     display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 0.7fr));
-    grid-template-rows: repeat(auto-fit, minmax(100px, 0.4fr));
+    grid-template-columns: repeat(3, minmax(250px, 0.7fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 0.5fr));
     gap:35px;
 }
 
