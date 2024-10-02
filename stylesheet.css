@@ -147,10 +147,10 @@ body{
 }
 
 .search-bar-container:hover{
-    box-shadow: 1px 1px 8px 1px #504f4f;
+    box-shadow: 1px 1px 8px 1px #b6946b;
   }
   .search-bar-container:focus-within{
-    box-shadow: 1px 1px 8px 1px #685e5e;
+    box-shadow: 1px 1px 8px 1px #b6946b;
     outline:none;
   }
 
