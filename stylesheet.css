@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-    /* border: 2px solid black; */
 }
 
 :root{
@@ -18,10 +17,6 @@
     --sidebar-width: clamp(210px, 22vw, 325px);
     --footer-heigth: 50px;
 }
-  
-:root {
-    font-size: clamp(10px, 0.625rem + 0.2vw, 17px);
-  }
 
 body{
     width: 100vw;
@@ -29,8 +24,8 @@ body{
     display: grid;
     gap: 40px;
     background-color:var(--main-container);
-    grid-template-columns: 5rem 1fr 1fr 1fr;
-    grid-template-rows: 0.8fr 4fr 0.1fr;
+    grid-template-columns: 5rem 1fr 1fr 0.7fr;
+    grid-template-rows: 0.6fr 4fr 0.1fr;
     grid-template-areas:    "dashboard header header header"
     "dashboard maincontent maincontent news"
     "footer footer footer footer";
@@ -381,15 +376,15 @@ body{
 }
 
 .news-container{
-    font-size: clamp(7px, calc(10px + 0.2vw), 16px);
-    max-height: fit-content;
+    font-size: clamp(2px, calc(10px + 0.2vw), 16px);
     background-color: white;
+    max-height: 50vh;
     padding: 20px;
     border-radius: 30px;
     box-shadow:5px 5px 10px #a8a6a6;
     margin-left: 0;
     margin-right: 20px;
-    overflow: auto;
+    overflow: hidden;
 
 }
 .news-tab{
